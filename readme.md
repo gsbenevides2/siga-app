@@ -41,7 +41,7 @@ yarn
 yarn start
 ```
 
-<p>Apos isso instale o <a href="">Expo Go</a> em seu celular. E faça a leitura do QR Code que aparecer no termina.</p>
+<p>Apos isso instale o <a href="https://expo.dev/client">Expo Go</a> em seu celular. E faça a leitura do QR Code que aparecer no termina.</p>
 
 <h2>📃 Licença</h2>
 <p>Este projeto está sobre a licença MIT. Veja ela em: <a href="LICENSE">LICENSE</a>.</p>
