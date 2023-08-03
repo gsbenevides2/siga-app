@@ -7576,10 +7576,10 @@ side-channel@^1.0.4:
     get-intrinsic "^1.0.2"
     object-inspect "^1.9.0"
 
-siga-fatec@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/siga-fatec/-/siga-fatec-0.0.7.tgz#681c14348c93d6a7ace7e3b7cf43b5c04afe83b3"
-  integrity sha512-x7uMMplJVK37aSyeI/8p4OLVjcDgOeti2H7Uiu9N7TiIiIFM3b4e3PB1buVNV0y1KN7wp0//QCm6AhGuSaYoag==
+siga-fatec@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/siga-fatec/-/siga-fatec-0.0.8.tgz#b79499939b660f995ebe2e8f36088becbc9c244b"
+  integrity sha512-DtAS8r0LjqY9VRwj5hUQOSFc6WZIzdK/ZuACCzDDsHM6KeScInVopDwskt2Vue93OWdgbzbhoSOmuQU7j6e9AQ==
   dependencies:
     axios "^1.4.0"
     node-html-parser "^6.1.5"
