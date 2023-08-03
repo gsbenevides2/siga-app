@@ -3,16 +3,23 @@ import { ScrollView, View } from "react-native";
 import { ActivityIndicator, Card, Text } from "react-native-paper";
 import { SigaSingleton } from "../../services/siga";
 import { ExamSubject } from "siga-fatec/src/types";
+import { format, parseISO } from "date-fns";
+
+function formatToBRDate(date: string) {
+  if (date === "0000-00-00T00:00:00") return "Data não definida";
+  const dateParsed = parseISO(date);
+  return format(dateParsed, "dd/MM/yyyy");
+}
 
 export function ExamsCalendarScreen() {
-  const [exams, setExams] = useState<ExamSubject[]>([]);
+  const [examsSubject, setExamSubject] = useState<ExamSubject[]>([]);
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     SigaSingleton.getInstace()
       .getExamsCalendar()
       .then((exams) => {
-        setExams(exams);
+        setExamSubject(exams);
         setLoaded(true);
       });
   }, []);
@@ -37,18 +44,22 @@ export function ExamsCalendarScreen() {
       )}
 
       {loaded &&
-        exams.map((e, i) => (
+        examsSubject.map((examSubject, i) => (
           <Card>
             <Card.Title
-              title={e.name}
-              subtitle={e.code}
+              title={examSubject.name}
+              subtitle={examSubject.code}
               titleNumberOfLines={2}
             />
             <Card.Content>
-              {e.exams.length === 0 && <Text>Nenhuma prova cadastrada</Text>}
-              {e.exams
-                .map((e) => `Prova: ${e.name} - Data: ${e.date}`)
-                .join("\n")}
+              <Text>
+                {examSubject.exams.length === 0 && "Nenhuma prova cadastrada"}
+                {examSubject.exams
+                  .map(
+                    (e) => `Prova: ${e.name} - Data: ${formatToBRDate(e.date)}`
+                  )
+                  .join("\n")}
+              </Text>
             </Card.Content>
           </Card>
         ))}
