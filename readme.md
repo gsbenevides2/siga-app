@@ -31,7 +31,7 @@ Aplicativo de celular para acesso dos alunos ao <a href="https://siga.cps.sp.gov
 </ul>
 
 <h2>📦 Como Baixar (Para Não Devs)</h2>
-<p align="justify">Por questões técnicas, o download da aplicação está disponível somente para android e fora da Google Play Store. Lembre-se de habilitar a instalação de aplicativos de fontes desconhecidas.Use o <a href="https://github.com/gsbenevides2/siga-app/releases/tag/1.0.0"> link</a> para fazer download do APK.</p>
+<p align="justify">Por questões técnicas, o download da aplicação está disponível somente para android e fora da Google Play Store. Lembre-se de habilitar a instalação de aplicativos de fontes desconhecidas.Use o <a href="https://github.com/gsbenevides2/siga-app/releases/tag/1.0.1"> link</a> para fazer download do APK.</p>
 
 <h2>📦 Como Baixar (Para Devs)</h2>
 <p>Para baixar o projeto, faça um clone desse repositório, execute o seguinte comando no seu terminal:</p>
